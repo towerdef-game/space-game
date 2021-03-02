@@ -2,4 +2,4 @@
 
 # Storyboard
  
-![](images/windows%20Storyboard.jpg)
+![](images/Storyboard%20.jpg)
