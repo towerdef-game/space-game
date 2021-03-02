@@ -2,4 +2,4 @@
 
 # Storyboard
  
-![](images/%20Storyboard.jpg)
+![](images/%20storyboard.jpg)
