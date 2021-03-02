@@ -5,14 +5,14 @@
 ![](/images/storyboard.jpg)
 
 ## slide 1
-crew gets into the Rachi spaceship
+crew gets into the tachi spaceship
 ## slide 2
-enemies attack the fleeing ship, Rachi fires back
+enemies attack the fleeing ship, tachi fires back
 ## slide 3
-achi destroys hanger doors
+tachi destroys hanger doors
 ## slide 4
 Donnager bridge about to be overrun 
 ## slide 5
-Rachi escapes the Donnager
+tachi escapes the Donnager
 ## slide 6
 Donnager self-destructs
