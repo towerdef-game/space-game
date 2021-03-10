@@ -16,3 +16,6 @@ Donnager bridge about to be overrun
 tachi escapes the Donnager
 ## slide 6
 Donnager self-destructs
+
+## inspired by this scene from the series The Expanse
+https://www.youtube.com/watch?v=bf3I-XkOkHM&ab_channel=Deterrence
