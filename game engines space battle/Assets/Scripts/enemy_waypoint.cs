@@ -26,7 +26,7 @@ public class enemy_waypoint : MonoBehaviour
         
         Angle();
 
-        destPoint = (destPoint + 1) % points.Length;
+        destPoint = (destPoint ) % points.Length;
     }
 
 
