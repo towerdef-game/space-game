@@ -6,6 +6,8 @@ public class turret : MonoBehaviour
 {
     public float smoothing = 1f;
     public Transform target;
+    public GameObject bullet;
+    public Transform barrel;
     private Quaternion lookrotation;
     private Vector3 direction;
     public bool canaim = false;
@@ -27,5 +29,9 @@ public class turret : MonoBehaviour
         lookrotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookrotation, Time.deltaTime * smoothing);
         
+        if(canshoot == true)
+        {
+            Instantiate(bullet, barrel.position, barrel.rotation);
+        }
     }
 }

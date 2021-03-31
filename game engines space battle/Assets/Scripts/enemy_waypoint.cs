@@ -16,6 +16,8 @@ public class enemy_waypoint : MonoBehaviour
     private float fly;
     public GameObject destination;
     public float arrive;
+    public Animator turrets;
+    public float delay;
     //ai sight
 
     
@@ -27,10 +29,15 @@ public class enemy_waypoint : MonoBehaviour
         Angle();
 
         destPoint = (destPoint ) % points.Length;
+        StartCoroutine(Deploying());
     }
 
+    IEnumerator Deploying()
+    {
+        yield return new WaitForSeconds(delay);
+        turrets.enabled = true;
+    }
 
-   
     void Update()
     {
        
