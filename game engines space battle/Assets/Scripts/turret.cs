@@ -11,6 +11,7 @@ public class turret : MonoBehaviour
     private Quaternion lookrotation;
     private Vector3 direction;
     public bool canaim = false;
+    public float rateoffire;
     public bool canshoot;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,11 @@ public class turret : MonoBehaviour
         yield return new WaitForSeconds(3f);
         canaim = true;
     }
+    IEnumerator FireRate()
+    {
+        yield return new WaitForSeconds(rateoffire);
+        canshoot = true;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +38,7 @@ public class turret : MonoBehaviour
         if(canshoot == true)
         {
             Instantiate(bullet, barrel.position, barrel.rotation);
+            canshoot = false;
         }
     }
 }
