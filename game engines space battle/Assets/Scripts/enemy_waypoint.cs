@@ -6,16 +6,19 @@ using UnityEngine.AI;
 public class enemy_waypoint : MonoBehaviour
 {
 
-    public GameObject player;
+
    //Patrol
     public Transform[] points;
     private int destPoint = 0;
-    private NavMeshAgent agent;
+  
     public float speed;
     public float turning;
-    private float fly;
+   // public float threshold;
+  
     public GameObject destination;
+    public GameObject destination2;
     public float arrive;
+  
     public Animator turrets;
     public float delay;
     //ai sight
@@ -26,7 +29,7 @@ public class enemy_waypoint : MonoBehaviour
     void Start()
     {
         
-        Angle();
+     
 
         destPoint = (destPoint ) % points.Length;
         StartCoroutine(Deploying());
@@ -42,26 +45,27 @@ public class enemy_waypoint : MonoBehaviour
     {
        
         transform.position = Vector3.MoveTowards(transform.position, points[destPoint].transform.position, speed * Time.deltaTime);
-        Quaternion rotterget = Quaternion.LookRotation(destination.transform.position + this.transform.position);
-        this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotterget, turning * Time.deltaTime);
+      
 
         if (Vector3.Distance(points[destPoint].transform.position, transform.position) < arrive)
         {
             destPoint++;
         }
-
+        if(destPoint >= 3)
+        {
+            Quaternion rotterget = Quaternion.LookRotation(destination2.transform.position + this.transform.position);
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotterget, turning * Time.deltaTime);
+        }
+        else
+            if(destPoint<= 3)
+        {
+            Quaternion rotterget = Quaternion.LookRotation(destination.transform.position + this.transform.position);
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotterget, turning * Time.deltaTime);
+        }
     }
 
    
-    void Angle()
-    {
-
-     
-
-
-        //  agent.destination = points[destPoint].position;
-       
-    }
+   
 
   
    
