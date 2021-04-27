@@ -18,6 +18,7 @@ public class enemy_waypoint : MonoBehaviour
     public GameObject destination;
     public GameObject destination2;
     public float arrive;
+    public TrailRenderer engine;
   
     public Animator turrets;
     public float delay;
@@ -61,6 +62,10 @@ public class enemy_waypoint : MonoBehaviour
         {
             Quaternion rotterget = Quaternion.LookRotation(destination.transform.position + this.transform.position);
             this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotterget, turning * Time.deltaTime);
+        }
+        if (destPoint >= 5)
+        {
+            engine.enabled = true;
         }
     }
 

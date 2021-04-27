@@ -47,6 +47,10 @@ public class turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (target == null)
+        {
+            return;
+        }
         direction = (target.transform.position - transform.position).normalized;
         lookrotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookrotation, Time.deltaTime * smoothing);
