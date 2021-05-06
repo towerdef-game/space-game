@@ -13,6 +13,7 @@ public class enemy_waypoint : MonoBehaviour
   
     public float speed;
     public float turning;
+    public destroy_door door;
    // public float threshold;
   
     public GameObject destination;
@@ -29,9 +30,6 @@ public class enemy_waypoint : MonoBehaviour
 
     void Start()
     {
-        
-     
-
         destPoint = (destPoint ) % points.Length;
         StartCoroutine(Deploying());
     }
@@ -56,6 +54,7 @@ public class enemy_waypoint : MonoBehaviour
         {
             Quaternion rotterget = Quaternion.LookRotation(destination2.transform.position + this.transform.position);
             this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotterget, turning * Time.deltaTime);
+            door.candestroy = true;
         }
         else
             if(destPoint<= 3)
