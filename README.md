@@ -29,3 +29,4 @@ I used triggers that would activate the next scene once a certain point was reac
 I used a flocking behaviour I found on youtube to create the swarm of drones that was circle the hanger scene link:https://www.youtube.com/watch?v=mBVarJm3Tgk .
 I used a nev mesh agent to get the pilot to move 
 I used a waypoint script that makes the ship move and rotate to different points when it reachs certain waypoints
+I made a courinte that would count down and when it was up it would play an animtion of the turrets on the ship opening then it would activate a script that would rotate the guns and fire at two targets that were invisible but would move around the map to simulate the ship firing at the drones. 
